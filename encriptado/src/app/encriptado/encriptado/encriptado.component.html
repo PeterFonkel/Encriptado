@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-6">
+        <div class="form-grpoup">
+            <label>Encriptar</label>
+            <input type="text" class="form-control" placeholder="Introduce texto a encriptar" [(ngModel)]="enctexto">
+        </div>
+
+        <div class="form-group">
+            <label for='txtPassword'>Clave</label>
+            <input type="password" class="form-control" placeholder="Introduce la clave" [(ngModel)]="encPass">
+        </div>
+        <br>
+        <textarea class="form-control" readonly rows="3">{{textoEncriptado}}</textarea>
+        <br>
+        <button type="button" class="btn btn-success float-right"
+            (click)="convertirTexto('encriptar')">Encriptar</button>
+    </div>
+    <div class="col-6">
+
+        <div class="form-grpoup">
+            <label>Desncriptar</label>
+            <input type="text" class="form-control" placeholder="Introduce texto a desencriptar" [(ngModel)]="destexto">
+        </div>
+
+        <div class="form-group">
+            <label for='txtPassword'>Clave</label>
+            <input type="password" class="form-control" placeholder="Introduce la clave" [(ngModel)]="desPass">
+        </div>
+        <br>
+        <textarea class="form-control" readonly rows="3">{{textoDesencriptado}}</textarea>
+        <br>
+        <button type="button" class="btn btn-success float-right"
+            (click)="convertirTexto(destexto)">desencriptar</button>
+
+    </div>
+
+
+</div>
